@@ -1,0 +1,25 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'
+             xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+    <g:HTMLPanel>
+        <b:Container>
+            <b:Navbar>
+                <b:Brand>Detonate</b:Brand>
+                <b:Nav>
+                	<b:NavText alignment="LEFT"> Using :</b></b:NavText>
+                    <b:NavLink href="http://www.gwtproject.org/">GWT</b:NavLink>
+                    <b:NavLink href="http://gwtbootstrap.github.io/">GWT Bootstrap</b:NavLink>
+                </b:Nav>
+                <b:Nav alignment="RIGHT">
+                    <b:NavLink href="http://square.github.io/crossfilter/">Crossfilter</b:NavLink>
+                    <b:NavLink href="http://www.amcharts.com/">AMCharts</b:NavLink>
+                </b:Nav>
+                <b:NavSearch size="2" placeholder="Search" alignment="RIGHT"/>
+            </b:Navbar>
+
+            <b:Hero>
+                <b:Heading size="2">Data Ahoy!</b:Heading>
+            </b:Hero>
+        </b:Container>
+    </g:HTMLPanel>
+</ui:UiBinder>

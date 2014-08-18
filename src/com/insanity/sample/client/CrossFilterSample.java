@@ -19,12 +19,12 @@ import com.insanity.sample.client.flightservice.JSONFlightServiceAsync;
 import com.square.crossfilter.client.Crossfilter;
 import com.square.crossfilter.client.CrossfilterUtil;
 import com.square.crossfilter.client.Dimension;
-import com.square.crossfilter.client.Group;
-import com.square.crossfilter.client.SingleGroup;
 import com.square.crossfilter.client.Dimension.DateReducer;
 import com.square.crossfilter.client.Dimension.DoubleReducer;
 import com.square.crossfilter.client.Dimension.IntReducer;
 import com.square.crossfilter.client.Dimension.StringReducer;
+import com.square.crossfilter.client.Group;
+import com.square.crossfilter.client.SingleGroup;
 
 /**
  * Entry point classes define <code>onModuleLoad()</code>.
@@ -149,74 +149,6 @@ public class CrossFilterSample implements EntryPoint {
 		GWT.log("Done AddGroups in " + (startAddGroups - endAddGroups) / 1000
 				+ " Seconds");
 
-		ValueListBox<FlightDelayData> datewidget = new ValueListBox<FlightDelayData>(
-				new Renderer<FlightDelayData>() {
-					public String render(FlightDelayData object) {
-						if (object != null) {
-							return object.getDate().toString();
-						} else
-							return "";
-					}
-
-					@Override
-					public void render(FlightDelayData object,
-							Appendable appendable) throws IOException {
-						appendable.append(render(object));
-					};
-				});
-		Collection<FlightDelayData> top5dates = date.top(5);
-		datewidget.setAcceptableValues(top5dates);
-		ValueListBox<FlightDelayData> distancewidget = new ValueListBox<FlightDelayData>(
-				new Renderer<FlightDelayData>() {
-					public String render(FlightDelayData object) {
-						if (object != null) {
-							return object.getDistance() + "";
-						} else
-							return "";
-					}
-
-					@Override
-					public void render(FlightDelayData object,
-							Appendable appendable) throws IOException {
-						appendable.append(render(object));
-					};
-				});
-		Collection<FlightDelayData> top5distance = distance.top(5);
-		distancewidget.setAcceptableValues(top5distance);
-		ValueListBox<FlightDelayData> delaywidget = new ValueListBox<FlightDelayData>(
-				new Renderer<FlightDelayData>() {
-					public String render(FlightDelayData object) {
-						if (object != null) {
-							return object.getDelay() + "";
-						} else
-							return "";
-					}
-
-					@Override
-					public void render(FlightDelayData object,
-							Appendable appendable) throws IOException {
-						appendable.append(render(object));
-					};
-				});
-		Collection<FlightDelayData> top5delays = delay.top(5);
-		delaywidget.setAcceptableValues(top5delays);
-		ValueListBox<FlightDelayData> destinationwidget = new ValueListBox<FlightDelayData>(
-				new Renderer<FlightDelayData>() {
-					public String render(FlightDelayData object) {
-						if (object != null) {
-							return object.getDestination();
-						} else
-							return "";
-					}
-
-					@Override
-					public void render(FlightDelayData object,
-							Appendable appendable) throws IOException {
-						appendable.append(render(object));
-					};
-				});
-		Collection<FlightDelayData> top5destination = destination.top(5);
-		destinationwidget.setAcceptableValues(top5destination);
 		ValueListBox<FlightDelayData> originwidget = new ValueListBox<FlightDelayData>(
 				new Renderer<FlightDelayData>() {
 					public String render(FlightDelayData object) {
@@ -237,11 +169,8 @@ public class CrossFilterSample implements EntryPoint {
 		HorizontalPanel panel = new HorizontalPanel();
 		panel.setWidth("75%");
 		panel.add(originwidget);
-		panel.add(destinationwidget);
-		panel.add(distancewidget);
-		panel.add(delaywidget);
-		panel.add(datewidget);
-		RootLayoutPanel.get().add(panel);
+
+		RootLayoutPanel.get().add(new DashboardUiBinder());
 		return dimensions;
 	}
 

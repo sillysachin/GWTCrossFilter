@@ -5,6 +5,8 @@
   <inherits name='com.square.crossfilter.CrossFilter'/>
   <inherits name='com.google.gwt.user.theme.clean.Clean'/>
   <!-- Other module inherits                                      -->
+  <inherits name="com.github.gwtbootstrap.Bootstrap"/>
+  
   <!-- Specify the app entry point class.                         -->
   <entry-point class='com.insanity.sample.client.CrossFilterSample'/>
   <!-- Specify the paths for translatable code                    -->
