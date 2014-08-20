@@ -4,5 +4,10 @@
 	<classpathentry kind="con" path="com.google.gwt.eclipse.core.GWT_CONTAINER"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/gwt-bootstrap-2.3.2.0.jar" sourcepath="C:/Documents and Settings/sachin.shekhar/.m2/repository/com/github/gwtbootstrap/gwt-bootstrap/2.3.2.0/gwt-bootstrap-2.3.2.0-sources.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/gwtchosen-2.0.0-20140802.152538-15.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/gwtchosen-1.2.0.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/gwtquery-1.4.2.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/gwtbootstrap3-0.8.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/gwtbootstrap3-extras-0.8.jar"/>
 	<classpathentry kind="output" path="war/WEB-INF/classes"/>
 </classpath>

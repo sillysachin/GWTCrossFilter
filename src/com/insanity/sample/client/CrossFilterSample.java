@@ -170,7 +170,7 @@ public class CrossFilterSample implements EntryPoint {
 		panel.setWidth("75%");
 		panel.add(originwidget);
 
-		RootLayoutPanel.get().add(new DashboardUiBinder());
+		RootLayoutPanel.get().add(new Bootstrap3DashboardUiBinder());
 		return dimensions;
 	}
 
