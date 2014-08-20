@@ -39,7 +39,7 @@
 								<b:ControlLabel for="inputApp">App</b:ControlLabel>
 								<b:Controls>
 									<chzn:ChosenListBox ui:field="countriesChosen"
-										allowSingleDeselect="true">
+										allowSingleDeselect="true" placeholderText="Select Country">
 										<g:item value=""></g:item>
 										<g:item value="United States">United States</g:item>
 										<g:item value="United Kingdom">United Kingdom</g:item>

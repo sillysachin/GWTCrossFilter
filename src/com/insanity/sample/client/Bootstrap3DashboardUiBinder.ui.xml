@@ -11,7 +11,8 @@
 			</gb:NavbarHeader>
 			<gb:NavbarCollapse gb:id="navbar-collapse">
 				<gb:NavbarNav>
-					<gb:AnchorListItem href="https://github.com/gwtbootstrap3/gwtbootstrap3/">GWT Bootstrap3</gb:AnchorListItem>
+					<gb:AnchorListItem
+						href="https://github.com/gwtbootstrap3/gwtbootstrap3/">GWT Bootstrap3</gb:AnchorListItem>
 					<gb:AnchorListItem href="http://www.gwtproject.org/">GWT</gb:AnchorListItem>
 					<gb:ListDropDown>
 						<gb:AnchorButton dataToggle="DROPDOWN">Misc</gb:AnchorButton>
@@ -31,8 +32,32 @@
 			</gb:NavbarCollapse>
 		</gb:Navbar>
 		<gb:Jumbotron>
-			<gb:Heading size="H1" text="Sample Web App" />
-			<gb.html:Paragraph>Just fork this repo and get started!!</gb.html:Paragraph>
+			<gb:Form>
+				<gb:FieldSet>
+					<gb:Legend>Sample form</gb:Legend>
+					<gb:FormGroup>
+						<gb:FormLabel for="formEmail">Email</gb:FormLabel>
+						<gb:FormControlStatic  gb:id="formEmail">email@example.example</gb:FormControlStatic >
+					</gb:FormGroup>
+					<gb:FormGroup>
+						<gb:FormLabel for="formPassword">Password</gb:FormLabel>
+						<gb:Input type="PASSWORD" gb:id="formPassword" />
+					</gb:FormGroup>
+
+					<gb:FormGroup>
+						<gb:FormLabel for="formName">Name</gb:FormLabel>
+						<gb:TextBox text="blabla" gb:id="formName" />
+					</gb:FormGroup>
+					<gb:FormGroup>						
+						<chzn:ChosenListBox ui:field="countriesChosen"
+							allowSingleDeselect="true" placeholderText="Select Country">
+							<g:item value=""></g:item>
+							<g:item value="United States">United States</g:item>
+							<g:item value="United Kingdom">United Kingdom</g:item>
+						</chzn:ChosenListBox>
+					</gb:FormGroup>
+				</gb:FieldSet>
+			</gb:Form>
 		</gb:Jumbotron>
 	</gb.html:Div>
 </ui:UiBinder>
