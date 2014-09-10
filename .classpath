@@ -9,5 +9,6 @@
 	<classpathentry kind="lib" path="war/WEB-INF/lib/gwtquery-1.4.2.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/gwtbootstrap3-0.8.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/gwtbootstrap3-extras-0.8.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/gwt-codeserver.jar"/>
 	<classpathentry kind="output" path="war/WEB-INF/classes"/>
 </classpath>

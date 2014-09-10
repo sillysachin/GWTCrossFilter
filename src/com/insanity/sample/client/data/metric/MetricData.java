@@ -1,9 +1,12 @@
 package com.insanity.sample.client.data.metric;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class MetricData
+public class MetricData implements Serializable
 {
+	private static final long serialVersionUID = -4666578428556417095L;
+
 	private Integer id;
 
 	private Date metricDate;

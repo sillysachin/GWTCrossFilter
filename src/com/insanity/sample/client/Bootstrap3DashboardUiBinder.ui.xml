@@ -27,7 +27,7 @@
 				</gb:NavbarForm>
 				<gb:NavbarText pull="RIGHT">
 					<gb.html:Text text="Signed in as "></gb.html:Text>
-					<gb:NavbarLink>John Snow</gb:NavbarLink>
+					<gb:NavbarLink>&nbsp;&nbsp;John Snow </gb:NavbarLink>
 				</gb:NavbarText>
 			</gb:NavbarCollapse>
 		</gb:Navbar>
