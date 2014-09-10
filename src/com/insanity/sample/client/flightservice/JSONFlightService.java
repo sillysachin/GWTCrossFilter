@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import com.google.gwt.user.client.rpc.RemoteService;
 import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
 import com.insanity.sample.client.data.flight.FlightDelayData;
+import com.insanity.sample.client.data.metric.MetricData;
 
 /**
  * The client-side stub for the RPC service.
@@ -13,4 +14,6 @@ import com.insanity.sample.client.data.flight.FlightDelayData;
 public interface JSONFlightService extends RemoteService
 {
 	ArrayList<FlightDelayData> getFlighDelayData();
+
+	ArrayList<MetricData> getMetricData();
 }
